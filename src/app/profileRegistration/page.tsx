@@ -66,7 +66,13 @@ const ProfileRegistration = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="appeal" className="block text-pastelPink">アピールポイント:</label>
+          <label 
+                htmlFor="appeal" 
+                className="block text-pastelPink"
+                >
+                  アピールポイント:
+          </label>
+
           <textarea
             id="appeal"
             className="w-full p-2 border border-gray-300 rounded"
@@ -78,14 +84,14 @@ const ProfileRegistration = () => {
         <div className="flex justify-between">
           <button
             type="submit"
-            className="bg-pastelPink text-white p-2 rounded flex-grow flex-basis"
+            className="bg-pastelPink text-white p-2 rounded flex-grow flex-basis hover:scale-105 hover:shadow-lg"
             style={{ height: '50px', marginRight: '8px' }}
           >
             登 録
           </button>
           <Link href="/profileDetail">
             <span
-              className="bg-pastelPink text-white p-2 rounded flex-grow flex-basis text-center cursor-pointer flex items-center justify-center"
+              className="bg-pastelPink text-white p-2 rounded flex-grow flex-basis text-center cursor-pointer flex items-center justify-center hover:scale-105 hover:shadow-lg"
               style={{ height: '50px', marginLeft: '8px' }}
             >
               次へ（プロフィール詳細入力）
