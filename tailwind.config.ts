@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pastelPink: "#DF4281",
+        pastelPink: "#E76C97",
         pastelBlue: "#C1E3EB",
         blue: "#AACAFFF",
       },

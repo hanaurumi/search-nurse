@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import '../../../globals.css';
+import '../../globals.css';
 
-const ToLearn = () => {
+export default function ToLearn () {
+
   const departments = [
     "タイムマネージメント",
     "アセスメント力",
@@ -40,7 +41,7 @@ const ToLearn = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-pastelBlue p-8">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
-        <h2 className="text-3xl font-semibold mb-6 text-pastelPink">経験してきた科を選択してください（3つまで）</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-pastelPink">パートナーに求めるスキルを以下から３つ選択してください</h2>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
           {departments.map((department) => (
@@ -86,5 +87,3 @@ const ToLearn = () => {
     </div>
   );
 };
-
-export default ToLearn;

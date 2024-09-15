@@ -55,7 +55,7 @@ export default function workHistory () {
                 checked={selectedValues.includes(value)}
                 disabled={!selectedValues.includes(value) && selectedValues.length >= 3}
               />
-              <label htmlFor={value} className="text-lg">{value}</label>
+              <label htmlFor={value} className="text-lg ">{value}</label>
             </div>
           ))}
         </div>
