@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import '../../globals.css';
 
 
-export default function ProfileFile (){
+export default function ProfileFile () {
 
   const valuesOptions = [
     "経済的報酬：豊かな生活",
@@ -63,6 +63,7 @@ export default function ProfileFile (){
         >
               トップ画面に戻る
          </button>
+
         <div className="flex space-x-4">
           <button
            onClick={() => router.back()}
@@ -70,6 +71,7 @@ export default function ProfileFile (){
          >
           前のページに戻る
          </button>
+         
         <button
            onClick={() => router.push('/profileFile/workHistory')}
            className="bg-pastelPink text-white py-2 px-6 rounded transform transition-transform duration-300 ease-out hover:scale-105 hover:bg-pastelPink-dark"
