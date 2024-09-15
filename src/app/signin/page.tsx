@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import '../globals.css';
 
-const SignUp = () => {
+export default function SignUp() {
+  
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -12,24 +13,29 @@ const SignUp = () => {
 
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
-    // サインアップロジックをここに追加
+    
     console.log({ id, password, confirmPassword });
-    router.push('/login'); // サインアップ成功後にログインページへリダイレクト
+    router.push('/login'); 
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* ヘッダー（必要であれば追加） */}
-      <header className="bg-white flex items-center justify-end p-4 shadow-md">
-        <nav className="flex space-x-4 ">
-          <a href="/profile" className="text-pastelPink">プロフィール</a>
-          <a href="/detail" className="text-pastelPink">詳細入力</a>
-          <a href="/search" className="text-pastelPink">検索</a>
-          <a href="/help" className="text-pastelPink">ヘルプ</a>
+      <header className="bg-white flex items-center justify-end p-6 shadow-md">
+        <nav className="flex space-x-6 ">
+          <a href="/search" 
+          className="text-pastelPink text-2xl hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          >検索
+          </a>
+
+          <a href="/help" 
+          className="text-pastelPink text-2xl hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          >ヘルプ
+          </a>
         </nav>
       </header>
 
-      {/* 背景画像のセクション */}
+    
       <div 
         className="flex-grow bg-cover bg-center opacity-65" 
         style={{ 
@@ -39,15 +45,14 @@ const SignUp = () => {
         }}
       ></div>
 
-      {/* タイトルと説明文 */}
+     
       <div className="text-center p-6 bg-white">
         <h1 className="text-6xl font-bold text-pastelPink leading-tight">Nurse Searchへようこそ</h1>
         <p className="text-Neutral text-[1.375rem] mt-2">
           スキルを高め、相乗効果を発揮できる最適なパートナーを見つけましょう。ここから始めましょう！
         </p>
       </div>
-
-      {/* サインアップフォーム */}
+      
       <div className="flex justify-center items-center flex-grow bg-pastelBlue">
         <form
           onSubmit={handleSignUp}
@@ -56,7 +61,12 @@ const SignUp = () => {
           <h2 className="text-2xl font-semibold mb-4 text-pastelPink">サインアップ</h2>
 
           <div className="mb-4">
-            <label htmlFor="id" className="block text-pastelPink">ID:</label>
+            <label 
+                 htmlFor="id" 
+                 className="block text-pastelPink">
+                  ID:
+             </label>
+
             <input
               type="text"
               id="id"
@@ -67,7 +77,13 @@ const SignUp = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="password" className="block text-pastelPink">パスワード:</label>
+            <label 
+                  htmlFor="password" 
+                  className="block text-pastelPink"
+                 >
+                  パスワード:
+            </label>
+
             <input
               type="password"
               id="password"
@@ -78,7 +94,13 @@ const SignUp = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="confirmPassword" className="block text-pastelPink">パスワード確認:</label>
+            <label 
+                  htmlFor="confirmPassword" 
+                  className="block text-pastelPink"
+                 >
+                  パスワード確認:
+            </label>
+
             <input
               type="password"
               id="confirmPassword"
@@ -95,7 +117,7 @@ const SignUp = () => {
             サインアップ
           </button>
 
-          <p className="mt-4 text-center text-gray-500">
+          <p className="mt-4 text-center text-gray-800">
             すでにアカウントをお持ちですか？{" "}
             <a href="/login" className="text-pastelPink underline">ログイン</a>
           </p>
@@ -103,6 +125,6 @@ const SignUp = () => {
       </div>
     </div>
   );
-};
+}
 
-export default SignUp;
+
