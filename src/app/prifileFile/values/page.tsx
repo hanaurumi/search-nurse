@@ -4,7 +4,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../globals.css';
 
-const ProfileFile = () => {
+
+export default function ProfileFile (){
+
   const valuesOptions = [
     "経済的報酬：豊かな生活",
     "達成：仕事の成果がわかりやすい",
@@ -80,5 +82,3 @@ const ProfileFile = () => {
     </div>
   );
 };
-
-export default ProfileFile;

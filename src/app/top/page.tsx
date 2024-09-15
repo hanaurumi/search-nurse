@@ -6,8 +6,8 @@ import { useRouter } from 'next/navigation';
 import '../globals.css';
 
 
+export default function TopPage (){
 
-const TopPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-white flex items-center justify-end p-4 shadow-md">
@@ -43,7 +43,7 @@ const TopPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-pastelPink">さあ始めましょう</h2>
           <div className="flex justify-center space-x-8"> {/* Space between buttons */}
             <a 
-               href="/signup" 
+               href="/signUp" 
                className="bg-pastelPink text-white px-6 py-4 rounded-lg shadow-md text-2xl inline-block transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                登録がまだの方
             </a>
@@ -59,4 +59,4 @@ const TopPage = () => {
   );
 };
 
-export default TopPage;
+
