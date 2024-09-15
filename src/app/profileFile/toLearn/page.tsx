@@ -26,58 +26,60 @@ export default function ToLearn () {
   const router = useRouter();
 
   const handleCheckboxChange = (department: string) => {
-    // 既に選択されている場合は選択を解除、そうでない場合は3つまで選択可能
     setSelectedDepartments(prevSelected => {
       if (prevSelected.includes(department)) {
         return prevSelected.filter(d => d !== department);
       } else if (prevSelected.length < 3) {
         return [...prevSelected, department];
       } else {
-        return prevSelected; // 3つ選択済みの場合は何もしない
+        return prevSelected;
       }
     });
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-pastelBlue p-8">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
-        <h2 className="text-3xl font-semibold mb-6 text-pastelPink">パートナーに求めるスキルを以下から３つ選択してください</h2>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-pastelBlue p-4 sm:p-6">
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full max-w-4xl">
+        <h2 className="text-4xl sm:text-4xl font-bold mb-8 text-pastelPink text-center"
+        >
+          パートナーに求めるスキルを以下から3つ選択してください
+        </h2>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {departments.map((department) => (
-            <div key={department} className="flex items-center">
+            <div key={department} className="flex items-center bg-gray-50 p-3 rounded-md">
               <input
                 type="checkbox"
                 id={department}
                 name="departments"
                 value={department}
-                className="mr-2 h-5 w-5 text-pastelPink focus:ring-pastelPink"
+                className="mr-3 h-6 w-6 text-pastelPink focus:ring-pastelPink"
                 onChange={() => handleCheckboxChange(department)}
                 checked={selectedDepartments.includes(department)}
               />
-              <label htmlFor={department} className="text-lg">{department}</label>
+              <label htmlFor={department} className="text-lg sm:text-xl">{department}</label>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 flex justify-between">
+        <div className="mt-10 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <button
             onClick={() => router.push('/')}
-            className="bg-pastelPink text-white py-2 px-6 rounded hover:bg-pastelPink-dark transition-colors"
+            className="bg-pastelPink text-white py-3 px-6 rounded-md text-lg hover:bg-pastelPink-dark transition-colors w-full sm:w-auto"
           >
             トップ画面に戻る
           </button>
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
             <button
               onClick={() => router.back()}
-              className="bg-pastelPink text-white py-2 px-6 rounded hover:bg-pastelPink-dark transition-colors"
+              className="bg-pastelPink text-white py-3 px-6 rounded-md text-lg hover:bg-pastelPink-dark transition-colors w-full sm:w-auto"
             >
               前のページに戻る
             </button>
             <button
               onClick={() => router.push('/profileFile')}
-              className="bg-pastelPink text-white py-2 px-6 rounded hover:bg-pastelPink-dark transition-colors"
-              disabled={selectedDepartments.length !== 3} // 3つ選択されていないと次へ進めない
+              className="bg-pastelPink text-white py-3 px-6 rounded-md text-lg hover:bg-pastelPink-dark transition-colors w-full sm:w-auto "
+              disabled={selectedDepartments.length !== 3}
             >
               次へ
             </button>
