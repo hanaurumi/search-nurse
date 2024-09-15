@@ -5,15 +5,21 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import '../globals.css';
 
+
+
 const TopPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-white flex items-center justify-end p-4 shadow-md">
         <nav className="flex space-x-4">
-          <a href="/profileRegistration" className="text-pastelPink hover:text-blue-600 transition-colors duration-300">プロフィール</a>
-          <a href="profileFile/workHistory" className="text-pastelPink hover:text-blue-600 transition-colors duration-300">詳細入力</a>
-          <a href="/search" className="text-pastelPink hover:text-blue-600 transition-colors duration-300">検索</a>
-          <a href="/help" className="text-pastelPink hover:text-blue-600 transition-colors duration-300">ヘルプ</a>
+          <a href="/search" 
+          className="text-xl font-medium text-pastelPink hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          >検索
+          </a>
+          <a href="/help" 
+          className="text-xl font-medium text-pastelPink hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          >ヘルプ
+          </a>
         </nav>
       </header>
         

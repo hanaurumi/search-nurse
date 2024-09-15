@@ -11,8 +11,13 @@ const config: Config = {
       colors: {
         pastelPink: "#DF4281",
         pastelBlue: "#5B4EB9",
-        blue: "#AACAFFF"
+        blue: "#AACAFFF",
       },
+    },
+  },
+  variants: {
+    extend: {
+      textColor:['hover'],
     },
   },
   plugins: [],
