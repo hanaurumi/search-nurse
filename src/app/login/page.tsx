@@ -17,10 +17,10 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-white flex justify-end p-6 shadow-md">
+      <header className="bg-white flex justify-end p-4 shadow-md">
         <nav className="flex space-x-6">
           <a href="/search" 
-          className="text-2xl text-pastelPink hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          className="text-xl text-pastelPink hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
           >検索
           </a>
 
@@ -98,7 +98,7 @@ export default function Login() {
 
           <p className="text-center mt-4 text-gray-800">
             アカウントをお持ちでないですか？ 
-            <a href="/signup" className="text-pastelPink underline">新規登録へ</a> 
+            <a href="/signin" className="text-pastelPink underline">新規登録へ</a> 
           </p>
         </form>
       </div>

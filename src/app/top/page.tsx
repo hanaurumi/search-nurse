@@ -43,7 +43,7 @@ export default function TopPage (){
           <h2 className="text-3xl font-semibold mb-6 text-pastelPink">さあ始めましょう</h2>
           <div className="flex justify-center space-x-8"> {/* Space between buttons */}
             <a 
-               href="/signUp" 
+               href="/signin" 
                className="bg-pastelPink text-white px-6 py-4 rounded-lg shadow-md text-2xl inline-block transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                登録がまだの方
             </a>
