@@ -33,10 +33,10 @@ export default function MatchingSearch() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-pastelBlue p-6">
       <div className="bg-white p-8 rounded shadow-lg w-full max-w-4xl">
-        <h2 className="text-2xl font-bold mb-6">条件を選択してください</h2>
+        <h2 className="text-4xl font-bold mb-6 text-pastelPink">条件を選択してください</h2>
         
         <section className="mb-8">
-          <h3 className="text-xl font-semibold mb-3">バリュー</h3>
+          <h3 className="text-2xl font-semibold mb-3 text-pastelPink">価値観</h3>
           <div className="grid grid-cols-2 gap-4">
             {allValues.map((value) => (
               <label key={value} className="flex items-center">
@@ -53,41 +53,7 @@ export default function MatchingSearch() {
         </section>
 
         <section className="mb-8">
-          <h3 className="text-xl font-semibold mb-3">スキル</h3>
-          <div className="grid grid-cols-2 gap-4">
-            {allSkills.map((skill) => (
-              <label key={skill} className="flex items-center">
-                <input
-                  type="checkbox"
-                  value={skill}
-                  onChange={() => handleSelection(setSkills, skill)}
-                  className="mr-2"
-                />
-                {skill}
-              </label>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h3 className="text-xl font-semibold mb-3">職歴</h3>
-          <div className="grid grid-cols-2 gap-4">
-            {allWorkHistory.map((work) => (
-              <label key={work} className="flex items-center">
-                <input
-                  type="checkbox"
-                  value={work}
-                  onChange={() => handleSelection(setWorkHistory, work)}
-                  className="mr-2"
-                />
-                {work}
-              </label>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h3 className="text-xl font-semibold mb-3">学びたいこと</h3>
+          <h3 className="text-xl font-semibold mb-3 text-pastelPink">学びたいこと</h3>
           <div className="grid grid-cols-2 gap-4">
             {allToLearn.map((learn) => (
               <label key={learn} className="flex items-center">

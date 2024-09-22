@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         pastelPink: "#d46976",
-        pastelBlue: "#0ea5e9",
+        pastelBlue: "#93c5fd",
         blue: "#AACAFFF",
       },
     },

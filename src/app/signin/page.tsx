@@ -21,15 +21,15 @@ export default function SignUp() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* ヘッダー（必要であれば追加） */}
-      <header className="bg-white flex items-center justify-end p-6 shadow-md">
+      <header className="bg-white flex items-center justify-end p-2 shadow-md">
         <nav className="flex space-x-6 ">
           <a href="/search" 
-          className="text-pastelPink text-2xl hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          className="text-pastelPink text-xl hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
           >検索
           </a>
 
           <a href="/help" 
-          className="text-pastelPink text-2xl hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
+          className="text-pastelPink text-xl hover:text-blue-600 hover:underline transition-all duration-300 ease-in-out transform hover:scale-105"
           >ヘルプ
           </a>
         </nav>
